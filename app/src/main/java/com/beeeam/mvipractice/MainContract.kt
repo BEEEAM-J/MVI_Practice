@@ -4,4 +4,6 @@ data class MainState(
     val count: Int = 0,
 )
 
-sealed interface MainSideEffect
+sealed interface MainSideEffect {
+    data class ToastMsg(val msg: String) : MainSideEffect
+}
